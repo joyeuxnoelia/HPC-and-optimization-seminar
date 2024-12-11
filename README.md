@@ -6,6 +6,8 @@ We explore how to use Scalene, a profiler that provides insights into the resour
 
 Repository: https://github.com/plasma-umass/scalene
 
-https://coderzcolumn.com/tutorials/python/scalene-cpu-and-memory-profiler-for-python-code
+Exemples of use: https://coderzcolumn.com/tutorials/python/scalene-cpu-and-memory-profiler-for-python-code
 
-Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line, or as a Visual Studio Code extension.
+Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line of your terminal (recommended), or as a Visual Studio Code extension.
+
+[Contribution guidelines for this project](qsim_seminar.md)
