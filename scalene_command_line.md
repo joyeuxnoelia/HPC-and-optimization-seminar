@@ -1,21 +1,28 @@
 Here we have an example of a command line using scalene: 
 
  ```
-scalene --outfile qubits/depth40_qubits31_50reps-01.html  --reduced-profile --cpu-sampling-rate 0.001  qsim.py
+scalene --outfile qsim.html  --reduced-profile --cpu-sampling-rate 0.001  qsim.py
 ```
 
 A list of usefull commands:
 
-```bash
-scalene --cli your_prog.py                       # use the command-line only (no web interface)
-
-scalene --cpu your_prog.py                       # only profile CPU
-scalene --cpu --gpu your_prog.py                 # only profile CPU and GPU
-scalene --cpu --gpu --memory your_prog.py        # profile everything (same as no options)
-
-scalene --reduced-profile your_prog.py           # only profile lines with significant usage
-scalene --profile-interval 5.0 your_prog.py      # output a new profile every five seconds
-
-scalene (Scalene options) --- your_prog.py (...) # use --- to tell Scalene to ignore options after that point
-scalene --help                                   # lists all options
 ```
+
+--cpu                             # profile CPU
+--gpu                             # profile GPU
+--memory                          # profile memory 
+--cpu --gpu --memory              # profile everything (same as no options)
+
+--reduced-profile                 # only profile lines with significant usage
+--cpu-sampling-rate 0.001         # specify the sampling rate (for lines that take small times)
+--use-virtual-time                #only report time spent in CPU (excluding time spent in I/O or blocking)
+
+--cli                             # use the command-line only (no web interface)
+--outfile qsim.txt                # creates an text file with the profiling 
+--outfile qsim.html               # creates an html file with the profiling 
+
+--help                            # lists all options
+
+```
+
+You can find exemples and more commands in this [link](https://coderzcolumn.com/tutorials/python/scalene-cpu-and-memory-profiler-for-python-code).
