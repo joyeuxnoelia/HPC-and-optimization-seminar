@@ -1,6 +1,8 @@
 Here we have an example of a command line using scalene: 
- 
+
+ ```
 scalene --outfile qubits/depth40_qubits31_50reps-01.html  --reduced-profile --cpu-sampling-rate 0.001  qsim.py
+```
 
 A list of usefull commands:
 
