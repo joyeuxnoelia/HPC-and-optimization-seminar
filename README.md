@@ -10,4 +10,4 @@ Exemples of use: https://coderzcolumn.com/tutorials/python/scalene-cpu-and-memor
 
 Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line of your terminal (recommended), or as a Visual Studio Code extension.
 
-[Contribution guidelines for this project](qsim_seminar.md)
+[Qsim exemple](Qsim_seminar.ipynb)
