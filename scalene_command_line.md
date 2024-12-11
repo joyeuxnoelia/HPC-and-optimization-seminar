@@ -4,7 +4,7 @@ scalene --outfile qubits/depth40_qubits31_50reps-01.html  --reduced-profile --cp
 
 A list of usefull commands:
 
-"""
+```bash
 scalene --cli your_prog.py                       # use the command-line only (no web interface)
 
 scalene --cpu your_prog.py                       # only profile CPU
@@ -16,4 +16,4 @@ scalene --profile-interval 5.0 your_prog.py      # output a new profile every fi
 
 scalene (Scalene options) --- your_prog.py (...) # use --- to tell Scalene to ignore options after that point
 scalene --help                                   # lists all options
-"""
+```
