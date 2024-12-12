@@ -32,3 +32,5 @@ $ slanzarv -m 8500 --partition GPGPU -c 16 --gpu --gputype a100 scalene --outfil
 ## 3. Qsim
 
 Qsim is a Schrödinger full state-vector simulator. It computes all the $2^n$ amplitudes of the state vector, where _n_ is the number of qubits. It's designed to run on multicore systems and GPUs. Check this [qsim exemple](Qsim_seminar.ipynb) to see how to optimice the simulation using the GPU and selecting the number of threads and fused gates.
+
+More about qsim: https://quantumai.google/qsim
