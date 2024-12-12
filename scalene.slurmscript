@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J scalene	# Job name
+#SBATCH -o scalene.%j.out	# Name of stdout output file(%j expands to jobId)
+#SBATCH -e scalene.%j.err	# Name of stderr output file(%j expands to jobId)
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=noesg@correo.ugr.es
+#SBATCH --partition=GPGPU
+#SBATCH --gres=gpu:a100
+#SBATCH -c 16
+#SBATCH --mem 8500
+
+srun scalene --outfile outfile.html --reduced-profile --cpu-sampling-rate 0.001 qsim_seminar.py
