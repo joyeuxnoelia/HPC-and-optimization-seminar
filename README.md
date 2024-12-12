@@ -18,19 +18,17 @@ PROTEUS user manual: https://proteus.ugr.es/docs/manual-uso/
 You can find an exemple of job description file using Scalene in this [slurm script](scalene.slurmscript). Once you have the job description file created, you can send the job from the command line:
 
 ```
-sbatch scalene.slurmscript
+$ sbatch scalene.slurmscript
 ```
 
-Alternatively to using `sbatch` and manually specifying the job, you can use the program `slanzarv`, a script that simplifies and automates this process:
+Alternatively to using `sbatch` and manually specifying the job, you can use the program `slanzarv`, a script that simplifies this process:
 
 ```
-slanzarv -m 8500 --partition GPGPU -c 16 --gpu --gputype a100 scalene --outfile outfile.html  --reduced-profile --cpu-sampling-rate 0.01 qsim_seminar.py
+$ slanzarv -m 8500 --partition GPGPU -c 16 --gpu --gputype a100 scalene --outfile outfile.html  --reduced-profile --cpu-sampling-rate 0.01 qsim_seminar.py
 
 ```
 
 
 ## 3. Qsim
 
-Qsim is a Schrödinger full state-vector simulator. It computes all the $2^n$ amplitudes of the state vector, where _n_ is the number of qubits.
-
-[Qsim exemple](Qsim_seminar.ipynb)
+Qsim is a Schrödinger full state-vector simulator. It computes all the $2^n$ amplitudes of the state vector, where _n_ is the number of qubits. It's designed to run on multicore systems and GPUs. Check this [qsim exemple](Qsim_seminar.ipynb) to see how to optimice the simulation using the GPU and selecting the number of threads and fused gates.
