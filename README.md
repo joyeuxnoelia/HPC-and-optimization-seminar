@@ -8,7 +8,9 @@ Repository: https://github.com/plasma-umass/scalene
 
 Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line of your terminal (recommended), or as a Visual Studio Code extension. See more info in [scalene_command_line](scalene_command_line.md).
 
-## 2. SLURM
+## 2. Slurm
+
+The scheduler decides where and when jobs are executed. Slurm is the scheduler used in PROTEUS. The job parameters are specified through a job description file or directly from the command line, such as the executable name and working directory, hardware requirements (number of processors, required memory and disk space, etc.), and the maximum execution time.
 
 PROTEUS user manual: https://proteus.ugr.es/docs/manual-uso/
 
