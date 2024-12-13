@@ -1,7 +1,7 @@
 Here we have an example of a command line using scalene: 
 
  ```
-scalene --outfile qsim.html  --reduced-profile --cpu-sampling-rate 0.001  qsim.py
+$ scalene --outfile qsim.html  --reduced-profile --cpu-sampling-rate 0.001  qsim.py
 ```
 
 A list of usefull commands:
