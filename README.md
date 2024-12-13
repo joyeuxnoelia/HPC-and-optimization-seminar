@@ -8,6 +8,15 @@ Repository: https://github.com/plasma-umass/scalene
 
 Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line of your terminal (recommended), or as a Visual Studio Code extension. See more info in [scalene_command_line](scalene_command_line.md).
 
+Some profiling outputs:
+
+- **Python Time**: This is the time the Python interpreter spends executing functions and operations written purely in Python, without considering extensions or libraries implemented in other languages.
+
+- **Native Time**: This represents the remaining time the interpreter spends executing code. For example, the time spent running libraries such as NumPy, SciPy, or QSim is included here.
+
+- **System Time**: This is the time spent by the operating system handling system calls and input/output operations, such as reading from or writing to the disk.
+
+
 ### Memory profiling
 
 With Scalene, you can determine how much memory your job requires, allowing you to reserve only the necessary amount. Here's an example of memory profiling for a quantum circuit of size *n*:
