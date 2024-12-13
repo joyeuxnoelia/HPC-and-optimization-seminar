@@ -9,8 +9,16 @@ Repository: https://github.com/plasma-umass/scalene
 Scalene is a high-performance CPU, GPU and memory profiler for Python. You can use Scalene at the command line of your terminal (recommended), or as a Visual Studio Code extension. See more info in [scalene_command_line](scalene_command_line.md).
 
 ### Memory profiling
+
+With Scalene, you can determine how much memory your job requires, allowing you to reserve only the necessary amount. Here's an example of memory profiling for a quantum circuit of size *n*:
+
 ![](plots/memory_qubits.png)
 
+### Time profiling
+
+You can also analyze when it is better to simulate your code on a CPU or a GPU.
+
+![](plots/cpu_vs_gpu.png)
 
 ## 2. Slurm
 
@@ -31,9 +39,17 @@ $ slanzarv -m 8500 --partition GPGPU -c 16 --gpu --gputype a100 scalene --outfil
 
 ```
 
+Here, 16 cores and the A100 GPU have been reserved. Regarding the number of cores, using more cores is not always better, as performance can sometimes degrade. In the following graph, Scalene has been used to profile the execution time as a function of the number of cores:
+
+![](plots/threads.png)
+
 
 ## 3. Qsim
 
 Qsim is a Schrödinger full state-vector simulator. It computes all the $2^n$ amplitudes of the state vector, where _n_ is the number of qubits. It's designed to run on multicore systems and GPUs. Check this [qsim exemple](Qsim_seminar.ipynb) to see how to optimice the simulation using the GPU and selecting the number of threads and fused gates.
+
+Gate fusion allows us to work with matrices that fit into cache memory, the closest memory, thereby avoiding the time overhead of moving information over long distances. Let's look at an example: with 30 qubits, it is 4 on both the CPU and GPU:
+
+![](plots/fused_gates.png)
 
 More about qsim: https://quantumai.google/qsim
